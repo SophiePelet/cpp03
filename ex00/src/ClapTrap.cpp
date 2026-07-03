@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sophie <sophie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/02 11:22:34 by sopelet           #+#    #+#             */
-/*   Updated: 2026/07/02 16:00:55 by sopelet          ###   ########.fr       */
+/*   Updated: 2026/07/03 14:48:12 by sophie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void	ClapTrap::attack(const std::string& target) {
 		std::cout << "ClapTrap " << MAGENTA << _name << RESET
 			<< " can't attack, no hit points left\n";
 	}
-	_hitPoints -= _attackPoints;
 	_energyPoints--;
 	std::cout << "ClapTrap " << MAGENTA << _name << RESET << RED << " attacks " << RESET
 		<< CYAN << target << RESET << ", causing " << RED << _attackPoints << RESET
