@@ -6,7 +6,7 @@
 /*   By: sophie <sophie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/02 11:22:34 by sopelet           #+#    #+#             */
-/*   Updated: 2026/07/03 15:01:29 by sophie           ###   ########.fr       */
+/*   Updated: 2026/07/03 16:20:37 by sophie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap& other) {
 	}
 	return (*this);
 }
-ClapTrap::~ClapTrap() { std::cout << "Destructor called\n"; }
+ClapTrap::~ClapTrap() { std::cout << "ClapTrap destructor called\n"; }
 
 // Member functions
 void	ClapTrap::attack(const std::string& target) {
