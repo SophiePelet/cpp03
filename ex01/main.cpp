@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sophie <sophie@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 14:51:06 by sophie            #+#    #+#             */
-/*   Updated: 2026/07/03 14:53:52 by sophie           ###   ########.fr       */
+/*   Updated: 2026/07/04 11:58:03 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	main() {
 		scav1.attack("Kewan");
 	
 	scav2.takeDamage(9);
-	scav2.attack("scav");
-	scav2.attack("scav");
+	scav2.attack("Scav");
+	scav2.attack("Scav");
 	scav2.guardGate();
 	
 	for (size_t i = 0; i < 9; ++i)

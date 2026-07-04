@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sophie <sophie@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 14:21:56 by sophie            #+#    #+#             */
-/*   Updated: 2026/07/03 15:29:45 by sophie           ###   ########.fr       */
+/*   Updated: 2026/07/04 12:05:17 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,13 @@ void ScavTrap::attack(const std::string& target) {
 			<< " can't attack, no hit points left\n";
 	}
 	_energyPoints--;
-	std::cout << "ScavTrap " << _name << " attacks " << target << ", causing "
-		<< _attackPoints << " points of damage!\n";
+	std::cout << "ScavTrap " << MAGENTA << _name << RESET << RED << " attacks " << RESET
+		<< CYAN << target << RESET << ", causing " << RED << _attackPoints
+			<< RESET << " points of damage!\n";
 	return ;
 }
 
 void ScavTrap::guardGate() {
-	std::cout << "ScavTrap is now in gate keeping mode\n";
+	std::cout << "ScavTrap " << MAGENTA << _name << RESET << " is now in gate keeping mode\n";
 	return ;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sophie <sophie@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 15:13:10 by sophie            #+#    #+#             */
-/*   Updated: 2026/07/03 15:29:45 by sophie           ###   ########.fr       */
+/*   Updated: 2026/07/04 12:04:38 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ FragTrap::~FragTrap() {
 
 // Member function
 void	FragTrap::highFivesGuys() {
-	std::cout << "Give me a high-five!\n";
+	std::cout << "FragTrap " << MAGENTA << _name << RESET << " is asking for a high five!\n";
 }

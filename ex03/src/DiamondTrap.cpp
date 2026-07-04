@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sophie <sophie@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 15:47:40 by sophie            #+#    #+#             */
-/*   Updated: 2026/07/03 16:19:19 by sophie           ###   ########.fr       */
+/*   Updated: 2026/07/04 12:10:12 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,6 @@ void	DiamondTrap::highFivesGuys() {
 	FragTrap::highFivesGuys();
 }
 void	DiamondTrap::whoAmI() {
-	std::cout << ClapTrap::_name << "\n";
-	std::cout << DiamondTrap::_name << "\n";
+	std::cout << "My Clap name is: " << MAGENTA << ClapTrap::_name << RESET << "\n";
+	std::cout << "My name is: " << MAGENTA << DiamondTrap::_name << RESET << "\n";
 }
