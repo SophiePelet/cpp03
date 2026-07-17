@@ -6,13 +6,15 @@
 /*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 15:47:40 by sophie            #+#    #+#             */
-/*   Updated: 2026/07/04 12:10:12 by sopelet          ###   ########.fr       */
+/*   Updated: 2026/07/17 19:16:00 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-// Constructors/destructor, copy constructor and copy assignement operator
+/*
+	Constructor/destructor, copy constructor and copy assignment operator
+*/
 DiamondTrap::DiamondTrap() {
 	std::cout << "DiamondTrap default constructor called\n";
 	this->_name = "Default";
@@ -52,7 +54,9 @@ DiamondTrap::~DiamondTrap() {
 	std::cout << "DiamondTrap destructor called\n";
 }
 
-//Member functions
+/*
+	Member functions
+*/
 void	DiamondTrap::attack(const std::string& target) {
 	ScavTrap::attack(target);
 }

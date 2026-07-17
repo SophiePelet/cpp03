@@ -6,7 +6,7 @@
 /*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/02 11:22:46 by sopelet           #+#    #+#             */
-/*   Updated: 2026/07/02 15:54:36 by sopelet          ###   ########.fr       */
+/*   Updated: 2026/07/17 19:22:03 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <string>
 
 #define RESET	"\033[0m"
+#define	BLUE	"\033[34m"
 #define RED		"\033[31m"
 #define GREEN	"\033[32m"
 #define MAGENTA	"\033[1m\033[35m"

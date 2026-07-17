@@ -6,14 +6,15 @@
 /*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 14:21:56 by sophie            #+#    #+#             */
-/*   Updated: 2026/07/04 12:05:17 by sopelet          ###   ########.fr       */
+/*   Updated: 2026/07/17 20:06:48 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-// Constructors/destructor, copy constructor and copy assignement operator
-
+/*
+	Constructor/destructor, copy constructor and copy assignment operator
+*/
 ScavTrap::ScavTrap() : ClapTrap() {
 	std::cout << "ScavTrap default constructor called\n";
 	this->_name = "Default";
@@ -49,8 +50,9 @@ ScavTrap::~ScavTrap() {
 	std::cout << "ScavTrap destructor called\n";
 }
 
-// member functions
-
+/*
+	Member functions
+*/
 void ScavTrap::attack(const std::string& target) {
 	if (_energyPoints == 0) {
 		std::cout << "ScavTrap " << MAGENTA << _name << RESET
@@ -60,6 +62,7 @@ void ScavTrap::attack(const std::string& target) {
 	else if (_hitPoints == 0) {
 		std::cout << "ScavTrap " << MAGENTA << _name << RESET
 			<< " can't attack, no hit points left\n";
+		return ;
 	}
 	_energyPoints--;
 	std::cout << "ScavTrap " << MAGENTA << _name << RESET << RED << " attacks " << RESET
@@ -69,6 +72,11 @@ void ScavTrap::attack(const std::string& target) {
 }
 
 void ScavTrap::guardGate() {
+	if (_hitPoints == 0) {
+		std::cout << "ScavTrap " << MAGENTA << _name << RESET
+			<< " can't enter guard mode, hit points are insufficient\n";	
+		return ;
+	}
 	std::cout << "ScavTrap " << MAGENTA << _name << RESET << " is now in gate keeping mode\n";
 	return ;
 }

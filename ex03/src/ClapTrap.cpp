@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sophie <sophie@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/02 11:22:34 by sopelet           #+#    #+#             */
-/*   Updated: 2026/07/03 16:20:25 by sophie           ###   ########.fr       */
+/*   Updated: 2026/07/17 20:03:11 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-//Constructor/destructor, copy constructor and copy assignment operator
+/*
+	Constructor/destructor, copy constructor and copy assignment operator
+*/
 ClapTrap::ClapTrap() : _name("Default"), _hitPoints(10), _energyPoints(10), _attackPoints(0){
 	std::cout << "ClapTrap default constructor called\n";
 }
@@ -39,7 +41,9 @@ ClapTrap &ClapTrap::operator=(const ClapTrap& other) {
 }
 ClapTrap::~ClapTrap() { std::cout << "ClapTrap destructor called\n"; }
 
-// Member functions
+/*
+	Member functions
+*/
 void	ClapTrap::attack(const std::string& target) {
 	if (_energyPoints == 0) {
 		std::cout << "ClapTrap " << MAGENTA << _name << RESET
@@ -49,6 +53,8 @@ void	ClapTrap::attack(const std::string& target) {
 	else if (_hitPoints == 0) {
 		std::cout << "ClapTrap " << MAGENTA << _name << RESET
 			<< " can't attack, no hit points left\n";
+		_hitPoints = 0;
+		return ;
 	}
 	_energyPoints--;
 	std::cout << "ClapTrap " << MAGENTA << _name << RESET << RED << " attacks " << RESET
@@ -60,6 +66,7 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 	if (_hitPoints < amount) {
 		std::cout << "ClapTrap " << MAGENTA << _name << RESET
 			<< " hit points dropped to 0\n";
+		_hitPoints = 0;
 		return ;
 	}
 	_hitPoints -= amount;

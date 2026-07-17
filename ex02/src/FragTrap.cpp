@@ -6,13 +6,15 @@
 /*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 15:13:10 by sophie            #+#    #+#             */
-/*   Updated: 2026/07/04 12:03:31 by sopelet          ###   ########.fr       */
+/*   Updated: 2026/07/17 20:15:45 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-// Constructors/destructor, copy constructor and copy assignement operator
+/*
+	Constructor/destructor, copy constructor and copy assignment operator
+*/
 FragTrap::FragTrap() : ClapTrap() {
 	std::cout << "FragTrap default constructor called\n";
 	this->_name = "Default";
@@ -48,7 +50,13 @@ FragTrap::~FragTrap() {
 	std::cout << "FragTrap destructor called\n";
 }
 
-// Member function
+/*
+	Member functions
+*/
 void	FragTrap::highFivesGuys() {
+	if (_hitPoints == 0) {
+		std::cout << "FragTrap " << MAGENTA << _name << RESET << " can't high five, no hit point left :(\n";
+		return ;
+	}
 	std::cout << "FragTrap " << MAGENTA << _name << RESET << " is asking for a high five!\n";
 }
