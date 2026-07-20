@@ -6,7 +6,7 @@
 /*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 15:47:40 by sophie            #+#    #+#             */
-/*   Updated: 2026/07/20 14:53:52 by sopelet          ###   ########.fr       */
+/*   Updated: 2026/07/20 15:16:17 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,16 @@ DiamondTrap::DiamondTrap(const std::string name) : ClapTrap(name + "_clap_name")
 	this->_energyPoints = 50;
 	this->_attackPoints = 30;
 }
-DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(), ScavTrap(), FragTrap() {
+DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(other), ScavTrap(other), FragTrap(other) {
 	std::cout << "DiamondTrap copy constructor called\n";
 	this->_name = other._name;
-	ClapTrap::_name = other.ClapTrap::_name;
-	this->_hitPoints = other._hitPoints;
-	this->_energyPoints = other._energyPoints;
-	this->_attackPoints = other._attackPoints;
 }
 DiamondTrap &DiamondTrap::operator=(const DiamondTrap& other) {
 	std::cout << "DiamondTrap copy assignment operator called\n";
 	if (this != &other) {
+		ScavTrap::operator=(other);
+		FragTrap::operator=(other);
 		this->_name = other._name;
-		ClapTrap::_name = other.ClapTrap::_name;
-		this->_hitPoints = other._hitPoints;
-		this->_energyPoints = other._energyPoints;
-		this->_attackPoints = other._attackPoints;
 	}
 	return (*this);
 }
@@ -67,6 +61,6 @@ void	DiamondTrap::highFivesGuys() {
 	FragTrap::highFivesGuys();
 }
 void	DiamondTrap::whoAmI() {
-	std::cout << "My Clap name is: " << MAGENTA << ClapTrap::_name << RESET << "\n";
-	std::cout << "My name is: " << MAGENTA << DiamondTrap::_name << RESET << "\n";
+	std::cout << "My name is: " << MAGENTA << DiamondTrap::_name << RESET
+		<< " and my ClapTrap name is: " << MAGENTA << ClapTrap::_name << RESET << "\n";
 }

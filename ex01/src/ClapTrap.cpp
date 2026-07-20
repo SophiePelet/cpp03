@@ -6,7 +6,7 @@
 /*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/02 11:22:34 by sopelet           #+#    #+#             */
-/*   Updated: 2026/07/17 19:58:40 by sopelet          ###   ########.fr       */
+/*   Updated: 2026/07/20 15:15:05 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 void	ClapTrap::beRepaired(unsigned int amount) {
 	if (_energyPoints == 0) {
 		std::cout << "ClapTrap " << MAGENTA << _name << RESET
-			<< " can't heal, hit points are insufficient\n";	
+			<< " can't heal, energy points are insufficient\n";	
 		return ;
 	}
 	else if (_hitPoints == 0) {

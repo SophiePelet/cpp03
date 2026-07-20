@@ -52,6 +52,7 @@ FragTrap::~FragTrap() {
 void	FragTrap::highFivesGuys() {
 	if (_hitPoints == 0) {
 		std::cout << "FragTrap " << MAGENTA << _name << RESET << " can't high five, no hit point left :(\n";
+		return ;
 	}
 	std::cout << "FragTrap " << MAGENTA << _name << RESET << " is asking for a high five!\n";
 }

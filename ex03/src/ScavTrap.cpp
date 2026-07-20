@@ -6,7 +6,7 @@
 /*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 14:21:56 by sophie            #+#    #+#             */
-/*   Updated: 2026/07/20 14:48:41 by sopelet          ###   ########.fr       */
+/*   Updated: 2026/07/20 15:06:03 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void ScavTrap::attack(const std::string& target) {
 void ScavTrap::guardGate() {
 	if (_hitPoints == 0) {
 		std::cout << "ScavTrap " << MAGENTA << _name << RESET
-			<< " can't enter guard mode, energy points are insufficient\n";	
+			<< " can't enter guard mode, hit points are insufficient\n";	
 		return ;
 	}
 	std::cout << "ScavTrap " << MAGENTA << _name << RESET << " is now in gate keeping mode\n";
