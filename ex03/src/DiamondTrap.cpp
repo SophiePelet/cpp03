@@ -6,7 +6,7 @@
 /*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 15:47:40 by sophie            #+#    #+#             */
-/*   Updated: 2026/07/17 19:16:00 by sopelet          ###   ########.fr       */
+/*   Updated: 2026/07/20 14:35:21 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,19 @@
 /*
 	Constructor/destructor, copy constructor and copy assignment operator
 */
-DiamondTrap::DiamondTrap() {
+DiamondTrap::DiamondTrap() : ClapTrap("Default_clap_name") {
 	std::cout << "DiamondTrap default constructor called\n";
 	this->_name = "Default";
-	ClapTrap::_name = "Default_clap_name";
-	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
-	this->_attackPoints = FragTrap::_attackPoints;
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackPoints = 30;
 }
-DiamondTrap::DiamondTrap(const std::string name) : ClapTrap(name) {
+DiamondTrap::DiamondTrap(const std::string name) : ClapTrap(name + "_clap_name") {
 	std::cout << "DiamondTrap constructor called\n";
 	this->_name = name;
-	ClapTrap::_name = name + "_clap_name";
-	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
-	this->_attackPoints = FragTrap::_attackPoints;
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackPoints = 30;
 }
 DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(), ScavTrap(), FragTrap() {
 	std::cout << "DiamondTrap copy constructor called\n";
